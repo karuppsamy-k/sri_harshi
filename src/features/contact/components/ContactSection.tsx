@@ -5,6 +5,7 @@ import { contactConfig } from '@/config';
 
 export const ContactSection: React.FC<{ id?: string }> = ({ id = 'contact' }) => {
   return (
+    
     <section id={id} className="section-padding relative">
       <div className="container-app">
         {/* Section Header */}
