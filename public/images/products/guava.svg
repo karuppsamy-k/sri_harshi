@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="50%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <!-- Outer skin gradient of whole guava -->
+    <linearGradient id="guavaSkin" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="35%" stop-color="#4ade80"/>
+      <stop offset="70%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <!-- Pink flesh gradient for the cut half -->
+    <linearGradient id="guavaPulp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="40%" stop-color="#fb7185"/>
+      <stop offset="80%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <!-- Inner core gradient -->
+    <radialGradient id="guavaCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fecdd3"/>
+      <stop offset="70%" stop-color="#fda4af"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </radialGradient>
+    <!-- Leaf gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="50%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <!-- Stem gradient -->
+    <linearGradient id="stemGradG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#713f12"/>
+    </linearGradient>
+    <filter id="softShadowG" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#064e3b" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="400" height="300" rx="16" fill="url(#bgGradG)"/>
+
+  <!-- Subtle decorative rings -->
+  <circle cx="200" cy="150" r="115" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.25"/>
+  <circle cx="200" cy="150" r="135" fill="none" stroke="#059669" stroke-width="1" opacity="0.15"/>
+
+  <!-- Ground Shadow below guavas -->
+  <ellipse cx="205" cy="245" rx="125" ry="18" fill="#047857" opacity="0.18" filter="url(#softShadowG)"/>
+
+  <!-- WHOLE GUAVA (Left & Slightly Behind) -->
+  <g filter="url(#softShadowG)">
+    <!-- Stem & Leaves -->
+    <path d="M 140 100 C 138 80, 148 68, 155 58 C 158 55, 153 52, 148 56 C 140 68, 132 82, 134 102 Z" fill="url(#stemGradG)"/>
+    <!-- Leaf 1 -->
+    <path d="M 146 75 C 175 60, 195 72, 205 95 C 185 102, 160 92, 146 75 Z" fill="url(#leafGrad)"/>
+    <path d="M 148 76 Q 176 80 203 94" stroke="#86efac" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <!-- Leaf 2 -->
+    <path d="M 135 85 C 105 72, 85 85, 75 105 C 95 110, 120 102, 135 85 Z" fill="url(#leafGrad)"/>
+    <path d="M 133 86 Q 106 94 77 104" stroke="#86efac" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+    <!-- Whole Guava Body (Slightly pyriform/rounded) -->
+    <path d="M 140 102 C 180 102, 215 130, 215 175 C 215 220, 175 245, 135 245 C 90 245, 65 215, 65 175 C 65 130, 100 102, 140 102 Z" fill="url(#guavaSkin)"/>
+    <!-- Surface highlight -->
+    <ellipse cx="115" cy="150" rx="22" ry="40" transform="rotate(-25 115 150)" fill="#ffffff" opacity="0.22"/>
+    <!-- Blossom end calyx mark -->
+    <ellipse cx="135" cy="242" rx="6" ry="3" fill="#14532d"/>
+  </g>
+
+  <!-- CUT GUAVA HALF (Right & Foreground - showing vibrant pink pulp) -->
+  <g filter="url(#softShadowG)">
+    <!-- Outer green rind ring -->
+    <circle cx="255" cy="172" r="62" fill="#15803d"/>
+    <circle cx="255" cy="172" r="59" fill="#4ade80"/>
+    <circle cx="255" cy="172" r="56" fill="#bbf7d0"/>
+    <!-- Pink fleshy pulp -->
+    <circle cx="255" cy="172" r="52" fill="url(#guavaPulp)"/>
+    <!-- Center core area -->
+    <circle cx="255" cy="172" r="32" fill="url(#guavaCore)"/>
+
+    <!-- Guava seeds arranged in radial ring -->
+    <ellipse cx="255" cy="148" rx="2.5" ry="4" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="270" cy="153" rx="2.5" ry="4" transform="rotate(35 270 153)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="278" cy="166" rx="2.5" ry="4" transform="rotate(70 278 166)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="277" cy="180" rx="2.5" ry="4" transform="rotate(105 277 180)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="268" cy="192" rx="2.5" ry="4" transform="rotate(140 268 192)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="255" cy="196" rx="2.5" ry="4" transform="rotate(180 255 196)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="242" cy="192" rx="2.5" ry="4" transform="rotate(215 242 192)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="233" cy="180" rx="2.5" ry="4" transform="rotate(250 233 180)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="232" cy="166" rx="2.5" ry="4" transform="rotate(285 232 166)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+    <ellipse cx="240" cy="153" rx="2.5" ry="4" transform="rotate(320 240 153)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.7"/>
+
+    <!-- Inner seed ring 2 -->
+    <ellipse cx="255" cy="160" rx="2" ry="3.5" fill="#fef08a" stroke="#ca8a04" stroke-width="0.5"/>
+    <ellipse cx="265" cy="168" rx="2" ry="3.5" transform="rotate(60 265 168)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.5"/>
+    <ellipse cx="262" cy="180" rx="2" ry="3.5" transform="rotate(120 262 180)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.5"/>
+    <ellipse cx="248" cy="180" rx="2" ry="3.5" transform="rotate(200 248 180)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.5"/>
+    <ellipse cx="246" cy="168" rx="2" ry="3.5" transform="rotate(280 246 168)" fill="#fef08a" stroke="#ca8a04" stroke-width="0.5"/>
+
+    <!-- Sheen on sliced flesh -->
+    <ellipse cx="238" cy="155" rx="12" ry="24" transform="rotate(-30 238 155)" fill="#ffffff" opacity="0.25"/>
+  </g>
+
+  <!-- Farm Fresh Badge -->
+  <g transform="translate(24, 24)">
+    <rect width="125" height="28" rx="14" fill="#ffffff" fill-opacity="0.95" stroke="#bbf7d0" stroke-width="1.5"/>
+    <circle cx="16" cy="14" r="5" fill="#16a34a"/>
+    <text x="28" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">ORCHARD FRESH</text>
+  </g>
+
+  <!-- Regional Tag -->
+  <g transform="translate(260, 248)">
+    <rect width="115" height="28" rx="8" fill="#15803d" fill-opacity="0.95"/>
+    <text x="57" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#ffffff">கொய்யா பழம்</text>
+  </g>
+</svg>

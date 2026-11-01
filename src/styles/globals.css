@@ -1,0 +1,345 @@
+/* =============================================
+ * Sri Harshi – Global Styles (Tailwind v4)
+ * Premium Glassmorphism B2B Vegetable & Fruit Supplier Theme
+ * ============================================= */
+
+@import 'tailwindcss';
+
+/* ---------- Design Tokens (Tailwind v4 @theme) ---------- */
+@theme {
+  /* Brand Fresh Greens */
+  --color-brand-green-50: #f0fdf4;
+  --color-brand-green-100: #dcfce7;
+  --color-brand-green-200: #bbf7d0;
+  --color-brand-green-300: #86efac;
+  --color-brand-green-400: #4ade80;
+  --color-brand-green-500: #22c55e;
+  --color-brand-green-600: #16a34a;
+  --color-brand-green-700: #15803d;
+  --color-brand-green-800: #166534;
+  --color-brand-green-900: #14532d;
+  --color-brand-green-950: #052e16;
+
+  /* Brand Warm Earth / Harvest */
+  --color-brand-earth-50: #fdf8f0;
+  --color-brand-earth-100: #faefd8;
+  --color-brand-earth-200: #f4dba8;
+  --color-brand-earth-300: #ecc270;
+  --color-brand-earth-400: #e3a03f;
+  --color-brand-earth-500: #d9871e;
+  --color-brand-earth-600: #c06b15;
+  --color-brand-earth-700: #9f5014;
+  --color-brand-earth-800: #823f17;
+  --color-brand-earth-900: #6c3516;
+  --color-brand-earth-950: #3d1a09;
+
+  --color-brand-cream: #fffdf5;
+  --color-brand-gold: #f5a623;
+
+  /* Semantic Colors */
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #0284c7;
+
+  /* Typography */
+  --font-family-sans:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Poppins', 'Inter', system-ui, sans-serif;
+
+  /* Glassmorphism Soft Shadows */
+  --shadow-brand: 0 10px 30px -5px rgba(22, 163, 74, 0.2);
+  --shadow-glass: 0 8px 32px 0 rgba(16, 85, 38, 0.08);
+  --shadow-glass-hover: 0 16px 48px -8px rgba(16, 85, 38, 0.16);
+  --shadow-subtle: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Base Resets & Defaults ---------- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    color: #1f2937;
+    background-color: #fafdfb;
+    background-image:
+      radial-gradient(at 15% 15%, rgba(220, 252, 231, 0.45) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(254, 243, 199, 0.35) 0px, transparent 50%),
+      radial-gradient(at 50% 85%, rgba(220, 252, 231, 0.35) 0px, transparent 60%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #0f291e;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+}
+
+/* ---------- Glassmorphism & Component Utilities ---------- */
+@layer components {
+  /* Layout Containers */
+  .container-app {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-app {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-app {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
+  }
+
+  /* Core Glassmorphic Surfaces */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow:
+      0 10px 30px -5px rgba(22, 101, 52, 0.07),
+      0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    border-radius: 1.25rem;
+  }
+
+  .glass-card-interactive {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow:
+      0 10px 30px -5px rgba(22, 101, 52, 0.07),
+      0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    border-radius: 1.25rem;
+    transition:
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.25s ease;
+  }
+
+  .glass-card-interactive:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 20px 40px -10px rgba(22, 101, 52, 0.14),
+      0 8px 16px -4px rgba(0, 0, 0, 0.04);
+    border-color: rgba(74, 222, 128, 0.6);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(220, 252, 231, 0.85);
+    box-shadow: 0 4px 20px -2px rgba(22, 101, 52, 0.05);
+  }
+
+  .glass-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.35rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .glass-input {
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid #e2e8f0;
+    border-radius: 0.75rem;
+    color: #1e293b;
+    font-size: 0.9375rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glass-input:focus {
+    outline: none;
+    border-color: #16a34a;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+  }
+
+  .glass-input::placeholder {
+    color: #94a3b8;
+  }
+
+  /* Form Helpers */
+  .form-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.375rem;
+  }
+
+  .form-error {
+    font-size: 0.8125rem;
+    color: #dc2626;
+    margin-top: 0.375rem;
+    font-weight: 500;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    box-shadow: 0 4px 14px 0 rgba(22, 163, 74, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+    box-shadow: 0 6px 20px 0 rgba(22, 163, 74, 0.45);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #15803d;
+    border: 1.5px solid #86efac;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background: #f0fdf4;
+    border-color: #4ade80;
+    color: #14532d;
+    transform: translateY(-1px);
+  }
+
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-md {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .btn-lg {
+    padding: 0.95rem 2rem;
+    font-size: 1.0625rem;
+  }
+}
+
+/* ---------- Utility Extras ---------- */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #86efac transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #86efac;
+    border-radius: 9999px;
+  }
+}

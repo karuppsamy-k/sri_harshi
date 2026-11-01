@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="50%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+    <linearGradient id="drumstickGrad1" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="40%" stop-color="#16a34a"/>
+      <stop offset="80%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="drumstickGrad2" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="50%" stop-color="#166534"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="podRidge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#16a34a" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#064e3b" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="400" height="300" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle decorative rings -->
+  <circle cx="200" cy="150" r="110" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.25"/>
+  <circle cx="200" cy="150" r="135" fill="none" stroke="#10b981" stroke-width="1" opacity="0.15"/>
+
+  <!-- Pod Shadow -->
+  <ellipse cx="205" cy="245" rx="130" ry="16" fill="#047857" opacity="0.16" filter="url(#softShadow)"/>
+
+  <!-- Drumstick 1 (Main diagonal pod) -->
+  <g filter="url(#softShadow)">
+    <!-- Main stem & ribbed pod body -->
+    <path d="M 60 230 C 110 200, 180 150, 330 75 C 340 70, 345 76, 335 83 C 200 165, 125 220, 75 245 C 65 250, 55 235, 60 230 Z" fill="url(#drumstickGrad1)"/>
+    <!-- Triangular ridge ridges -->
+    <path d="M 70 234 Q 190 155 330 78" stroke="#86efac" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M 65 240 Q 185 160 325 83" stroke="#14532d" stroke-width="2.5" fill="none" opacity="0.5"/>
+    <!-- Seed nodules -->
+    <ellipse cx="120" cy="200" rx="8" ry="14" transform="rotate(-30 120 200)" fill="#166534" opacity="0.35"/>
+    <ellipse cx="175" cy="165" rx="8" ry="15" transform="rotate(-30 175 165)" fill="#166534" opacity="0.35"/>
+    <ellipse cx="235" cy="130" rx="8" ry="15" transform="rotate(-30 235 130)" fill="#166534" opacity="0.35"/>
+    <ellipse cx="290" cy="98" rx="7" ry="13" transform="rotate(-30 290 98)" fill="#166534" opacity="0.35"/>
+  </g>
+
+  <!-- Drumstick 2 (Secondary overlapping pod) -->
+  <g filter="url(#softShadow)">
+    <path d="M 80 250 C 140 215, 220 145, 345 95 C 352 92, 355 98, 345 104 C 235 158, 150 232, 95 262 C 87 266, 76 254, 80 250 Z" fill="url(#drumstickGrad2)"/>
+    <path d="M 90 252 Q 220 155 342 98" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Drumstick 3 (Curved background pod) -->
+  <g opacity="0.9">
+    <path d="M 50 195 C 130 175, 230 120, 320 60 C 326 56, 329 62, 322 66 C 240 128, 140 185, 62 208 C 53 211, 46 200, 50 195 Z" fill="#15803d"/>
+    <path d="M 60 200 Q 180 145 318 64" stroke="#4ade80" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Stem tips & cut sections -->
+  <circle cx="335" cy="78" r="4.5" fill="#ca8a04"/>
+  <circle cx="347" cy="99" r="4" fill="#a16207"/>
+  <circle cx="63" cy="238" r="6" fill="#14532d"/>
+
+  <!-- Farm Fresh Badge -->
+  <g transform="translate(24, 24)">
+    <rect width="115" height="28" rx="14" fill="#ffffff" fill-opacity="0.9" stroke="#bbf7d0" stroke-width="1.5"/>
+    <circle cx="16" cy="14" r="5" fill="#16a34a"/>
+    <text x="28" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">TAMIL NADU</text>
+  </g>
+
+  <!-- Regional Tag -->
+  <g transform="translate(260, 248)">
+    <rect width="115" height="28" rx="8" fill="#166534" fill-opacity="0.9"/>
+    <text x="57" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#ffffff">முருங்கைக்காய்</text>
+  </g>
+</svg>
