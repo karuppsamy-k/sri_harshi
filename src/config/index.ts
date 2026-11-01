@@ -16,7 +16,7 @@ export const contactConfig = {
   person: import.meta.env.VITE_CONTACT_PERSON ?? 'Murugan K',
   phone: import.meta.env.VITE_CONTACT_PHONE ?? '9344226400',
   phoneDisplay: import.meta.env.VITE_CONTACT_PHONE_DISPLAY ?? '+91 93442 26400',
-  email: import.meta.env.VITE_CONTACT_EMAIL ?? 'karuppasamy.k8987@gmail.com',
+  email: import.meta.env.VITE_CONTACT_EMAIL ?? 'sriharshifreshmart@gmail.com',
   whatsapp: import.meta.env.VITE_CONTACT_WHATSAPP ?? '919344226400',
   whatsappUrl: 'https://wa.me/919344226400',
   address: import.meta.env.VITE_BUSINESS_ADDRESS ?? 'Tamil Nadu Wholesale Produce Hub, South India',
